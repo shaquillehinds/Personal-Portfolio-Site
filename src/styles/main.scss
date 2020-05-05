@@ -1,9 +1,14 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 @import "./base/base";
+@import "./base/typography";
 @import "./layouts/background-image";
 @import "./layouts/landing";
 @import "./components/navigation";
 @import "./layouts/portfolio";
 @import "./layouts/contact";
+@import "./layouts/skills";
+@import "./layouts/resume-portfolio";
+@import "./layouts/experience";
+@import "./layouts/education";
 @import "./components/overlay";

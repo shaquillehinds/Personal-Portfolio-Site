@@ -26,17 +26,23 @@
     font-weight: 300;
     background: none;
     color: white;
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 0;
     text-transform: uppercase;
     border-radius: 1rem;
     cursor: pointer;
-    transition: all 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+
+    a {
+      padding: 1.2rem 2rem;
+      transition: color 300ms ease-in-out;
+    }
+    a:hover {
+      color: $dark-blue;
+      border-color: $dark-blue;
+    }
 
     &:hover {
       background-color: white;
-      color: $dark-blue;
-      border-color: $dark-blue;
-      font-weight: 500;
     }
   }
   &__icon-img {
