@@ -1,0 +1,11 @@
+.overlay {
+  width: 72%;
+  height: 50rem;
+  background-color: rgba($dark-blue, 0.5);
+  @include centerAbs;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}

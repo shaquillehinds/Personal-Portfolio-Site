@@ -1,0 +1,45 @@
+.landing {
+  overflow: hidden;
+}
+.hero {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  position: relative;
+  //   position: absolute;
+
+  &__title {
+    @include title;
+  }
+  &__description {
+    font-size: 3.3rem;
+    letter-spacing: 0.6rem;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 300;
+  }
+  &__button {
+    margin: 0 auto;
+    letter-spacing: 0.3rem;
+    border: solid 0.1rem white;
+    font-size: 2.1rem;
+    font-weight: 300;
+    background: none;
+    color: white;
+    padding: 1.2rem 2rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      background-color: white;
+      color: $dark-blue;
+      border-color: $dark-blue;
+      font-weight: 500;
+    }
+  }
+  &__icon-img {
+    width: 6rem;
+  }
+}

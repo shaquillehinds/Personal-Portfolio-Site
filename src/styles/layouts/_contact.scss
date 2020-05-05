@@ -1,0 +1,48 @@
+.contact {
+  height: 81rem;
+  position: relative;
+
+  &__title {
+    h3 {
+      margin: 0;
+      @include title;
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 80%;
+    height: 30%;
+    margin: 0 auto;
+
+    &-item {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding-bottom: 0;
+      word-wrap: break-word;
+      align-items: center;
+      max-width: 55rem;
+      margin: 0 auto;
+    }
+  }
+  &__icon {
+    margin: 0 3rem;
+
+    &-email {
+      width: 5rem;
+    }
+    &-cell {
+      width: 3rem;
+    }
+  }
+  &__text {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 2.4rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
