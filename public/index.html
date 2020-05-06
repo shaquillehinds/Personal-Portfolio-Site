@@ -3,19 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <title>Shaquille Hinds | Portfolio</title>
   </head>
   <body>
     <div class="background-image">
-      <img src="./img/wallpaperflare.com_wallpaper.jpg" alt="background-image" />
+      <img
+        src="./img/wallpaperflare.com_wallpaper.jpg"
+        alt="background-image"
+      />
     </div>
     <div class="nav nav__left">
       <ul class="nav__items">
-        <li class="nav__item"><a href="#home">Home</a></li>
+        <li class="nav__item"><a id="home-link" href="#home">Home</a></li>
         <li class="nav__divider"></li>
-        <li class="nav__item"><a href="#portfolio">Portfolio</a></li>
+        <li class="nav__item">
+          <a id="portfolio-link" href="#portfolio">Portfolio</a>
+        </li>
         <li class="nav__divider"></li>
-        <li class="nav__item"><a href="#contact">Contact</a></li>
+        <li class="nav__item">
+          <a id="contact-link" href="#contact">Contact</a>
+        </li>
       </ul>
     </div>
     <div class="nav nav__right">
@@ -28,7 +39,9 @@
         <div class="overlay">
           <div class="hero__title">Shaquille Hinds</div>
           <div class="hero__description">Full Stack Developer</div>
-          <button class="hero__button"><a href="./resume.html">Resume</a></button>
+          <button class="hero__button">
+            <a href="./resume.html">Resume</a>
+          </button>
           <div class="hero__icon">
             <a href="https://github.com/shaquillehinds"
               ><img class="hero__icon-img" src="./img/Github.png" alt="Github"
@@ -46,9 +59,9 @@
               <h3>Frontend</h3>
             </div>
             <div class="portfolio__left-icons">
-              <img src="./img/html-5.png" alt="html5" />
-              <img src="./img/css3.png" alt="css3" />
-              <img src="./img/react-1.png" alt="react" />
+              <img class="lazyload" data-src="./img/html-5.png" alt="html5" />
+              <img class="lazyload" data-src="./img/css3.png" alt="css3" />
+              <img class="lazyload" data-src="./img/react-1.png" alt="react" />
             </div>
           </div>
           <div class="portfolio__right">
@@ -65,10 +78,22 @@
               <h3>Backend</h3>
             </div>
             <div class="portfolio__left-icons">
-              <img src="./img/nodejs-icon.png" alt="nodejs" />
+              <img
+                class="lazyload"
+                data-src="./img/nodejs-icon.png"
+                alt="nodejs"
+              />
               <div class="portfolio__left-icons--wide">
-                <img src="./img/express-109.png" alt="expressjs" />
-                <img src="./img/mongodb.png" alt="mongodb" />
+                <img
+                  class="lazyload"
+                  data-src="./img/express-109.png"
+                  alt="expressjs"
+                />
+                <img
+                  class="lazyload"
+                  data-src="./img/mongodb.png"
+                  alt="mongodb"
+                />
               </div>
             </div>
           </div>
@@ -86,9 +111,21 @@
               <h3>Design</h3>
             </div>
             <div class="portfolio__left-icons">
-              <img src="./img/photoshop-cc.png" alt="photoshop-cc" />
-              <img src="./img/adobe-illustrator-cc.png" alt="adobe-illustrator-cc" />
-              <img src="./img/adobe-xd.png" alt="adobe-xd" />
+              <img
+                class="lazyload"
+                data-src="./img/photoshop-cc.png"
+                alt="photoshop-cc"
+              />
+              <img
+                data-src="./img/adobe-illustrator-cc.png"
+                class="lazyload"
+                alt="adobe-illustrator-cc"
+              />
+              <img
+                class="lazyload"
+                data-src="./img/adobe-xd.png"
+                alt="adobe-xd"
+              />
             </div>
           </div>
           <div class="portfolio__right">
@@ -108,16 +145,16 @@
         <div class="contact__items">
           <div class="contact__items-email contact__items-item">
             <img
-              class="contact__icon contact__icon-email"
-              src="./img/iconmonstr-email-1.png"
+              class="contact__icon contact__icon-email lazyload"
+              data-src="./img/iconmonstr-email-1.png"
               alt="email"
             />
             <p class="contact__text">shaquillehinds72@hotmail.com</p>
           </div>
           <div class="contact__items-cell contact__items-item">
             <img
-              class="contact__icon contact__icon-cell"
-              src="./img/iconmonstr-smartphone-3.png"
+              class="contact__icon contact__icon-cell lazyload"
+              data-src="./img/iconmonstr-smartphone-3.png"
               alt="cellphone"
             />
             <p class="contact__text">1-246-265-9382</p>
@@ -125,6 +162,7 @@
         </div>
       </div>
     </section>
+
     <script src="/bundle.js"></script>
   </body>
 </html>
