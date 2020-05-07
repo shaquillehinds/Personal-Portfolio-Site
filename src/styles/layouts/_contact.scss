@@ -13,22 +13,35 @@
     justify-content: space-between;
     flex-direction: column;
     width: 80%;
-    height: 30%;
+    height: 60%;
     margin: 0 auto;
+
+    @include respond(laptop) {
+      height: 30%;
+    }
 
     &-item {
       width: 100%;
       display: flex;
       justify-content: flex-start;
+      flex-direction: column;
       padding-bottom: 0;
       word-wrap: break-word;
       align-items: center;
       max-width: 55rem;
       margin: 0 auto;
+
+      @include respond(laptop) {
+        flex-direction: row;
+      }
     }
   }
   &__icon {
-    margin: 0 3rem;
+    margin: 2rem 3rem;
+
+    @include respond(laptop) {
+      margin: 0 3rem;
+    }
 
     &-email {
       width: 5rem;
@@ -40,9 +53,18 @@
   &__text {
     margin: 0 auto;
     padding: 0;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     letter-spacing: 0.5rem;
     font-weight: 300;
     font-style: italic;
+    width: 100%;
+    word-wrap: break-word;
+
+    @include respond(tablet) {
+      font-size: 2.4rem;
+    }
+    @include respond(widescreen) {
+      font-size: 3rem;
+    }
   }
 }

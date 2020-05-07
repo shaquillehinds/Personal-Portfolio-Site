@@ -12,11 +12,18 @@
     @include title;
   }
   &__description {
-    font-size: 3.3rem;
+    font-size: 1.5rem;
     letter-spacing: 0.6rem;
     text-transform: uppercase;
     font-style: italic;
     font-weight: 300;
+
+    @include respond(tablet) {
+      font-size: 2.4rem;
+    }
+    @include respond(laptop) {
+      font-size: 3.3rem;
+    }
   }
   &__button {
     margin: 0 auto;
@@ -47,5 +54,10 @@
   }
   &__icon-img {
     width: 6rem;
+    transition: transform 200ms ease-in;
+
+    &:hover {
+      transform: scale(1.5);
+    }
   }
 }

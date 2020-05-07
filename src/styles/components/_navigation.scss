@@ -1,15 +1,48 @@
 .nav {
   position: fixed;
-  z-index: 10;
+  z-index: -10;
   color: white;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 4.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
 
   &__left {
-    left: 3%;
+    width: 100%;
+    height: 60%;
+    background-color: rgba($dark-blue, 0.81);
+    margin-top: -10%;
+    padding-top: 10%;
+
+    @include respond(laptop) {
+      width: auto;
+      height: auto;
+      background: none;
+      margin-top: 0;
+      padding-top: 0;
+    }
   }
   &__right {
-    right: 3%;
+    z-index: -10;
+    top: 40%;
+    transform: translateX(-50%);
+  }
+
+  @include respond(laptop) {
+    z-index: 10;
+    opacity: 1;
+    top: 50%;
+
+    &__left {
+      left: 3%;
+      transform: translate(0%, -50%);
+    }
+    &__right {
+      left: initial;
+      right: 3%;
+      transform: translate(0%, -50%);
+    }
   }
 
   &__items {
@@ -22,8 +55,17 @@
     flex-direction: column;
     text-align: center;
 
+    @include respond(laptop) {
+      height: 18rem;
+    }
+
     &--resume {
       justify-content: center;
+      height: 3rem;
+
+      @include respond(laptop) {
+        height: 18rem;
+      }
     }
   }
 
@@ -47,6 +89,19 @@
     align-self: center;
     margin: 0.5rem 0;
     background-color: white;
+    display: none;
+
+    @include respond(laptop) {
+      display: block;
+    }
+  }
+}
+.show-menu {
+  z-index: 10;
+  opacity: 1;
+
+  &.nav__right {
+    z-index: 15;
   }
 }
 

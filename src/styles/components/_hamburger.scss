@@ -1,0 +1,68 @@
+.hamburger {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  //   align-items: center;
+  z-index: 100;
+  top: 3%;
+  right: 3%;
+  width: 6rem;
+  height: 6rem;
+  background: rgba($dark-grey, 0.5);
+  border-radius: 50%;
+
+  @include respond(laptop) {
+    display: none;
+  }
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    position: relative;
+  }
+
+  &__line {
+    width: 57%;
+    height: 0.3rem;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: background-color 300ms ease-in-out;
+    transform: translate(-50%, -50%);
+
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      height: 0.3rem;
+      background-color: white;
+      position: absolute;
+      top: 1rem;
+      transform-origin: 0% 0%;
+      transition: transform 300ms ease-in-out;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      display: block;
+      height: 0.3rem;
+      background-color: white;
+      position: relative;
+      bottom: 1rem;
+      transform-origin: 0% 0%;
+      transition: transform 300ms ease-in-out;
+    }
+    &--close {
+      background-color: transparent;
+
+      &::after {
+        transform: rotate(-45deg) scale(1.2) translate(-2px, 4px);
+      }
+      &::before {
+        transform: rotate(45deg) scale(1.2) translate(0px, -5px);
+      }
+    }
+  }
+}

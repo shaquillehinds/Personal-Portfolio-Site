@@ -1,9 +1,13 @@
 .portfolio {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  @include respond(laptop) {
+    height: 100vh;
+  }
 
   &__section {
     height: 33%;
@@ -18,15 +22,26 @@
   &__container {
     width: 72%;
     margin: 0 auto;
-    padding: 1.2rem 0 3rem 0;
+    // padding: 1.2rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(laptop) {
+      flex-direction: row;
+    }
   }
   &__left {
-    width: 30%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+
+    @include respond(laptop) {
+      width: 30%;
+    }
 
     &-title {
       text-transform: uppercase;
@@ -36,6 +51,10 @@
       h3 {
         font-weight: 400;
       }
+
+      @include respond(widescreen) {
+        font-size: 4.5rem;
+      }
     }
 
     &-icons {
@@ -44,9 +63,21 @@
       margin: 0 auto;
       width: 63%;
 
+      @include respond(laptop) {
+        width: 63%;
+      }
+
       img {
-        width: 3.3rem;
+        width: 2.7rem;
         object-fit: contain;
+
+        @include respond(laptop) {
+          width: 3.3rem;
+        }
+
+        @include respond(widescreen) {
+          width: 5.1rem;
+        }
       }
       &--wide {
         display: flex;
@@ -54,15 +85,131 @@
         justify-content: space-between;
         width: 9rem;
         height: 100%;
-
+        @include respond(tablet) {
+          flex-direction: row;
+        }
+        @include respond(laptop) {
+          flex-direction: column;
+        }
         img {
-          height: 3rem;
+          height: 2.4rem;
           width: 9rem;
+          @include respond(tablet) {
+            &:not(:nth-child(2)) {
+              margin-right: 3rem;
+            }
+          }
+
+          @include respond(laptop) {
+            height: 3rem;
+            margin-right: 0;
+          }
+          @include respond(widescreen) {
+            height: 5.1rem;
+          }
         }
       }
     }
   }
   &__right {
     width: 80%;
+    margin: 1rem 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @include respond(laptop) {
+      margin: 0;
+    }
+
+    &-item {
+      width: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:not(:nth-child(0)) {
+        margin-left: 1rem;
+      }
+      @include respond(laptop) {
+        margin: 0;
+      }
+
+      & > a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+
+        &::after {
+          content: "VIEW";
+          font-size: 1.5rem;
+          letter-spacing: 0.2rem;
+          display: flex;
+          align-items: center;
+          position: absolute;
+          justify-content: center;
+          width: 12rem;
+          height: 4.5rem;
+          background-color: rgba($darker-blue, 0.72);
+          top: 0;
+          transform: translateY(-100%);
+          transition: transform 300ms ease-in-out;
+          pointer-events: none;
+        }
+        &:hover::after {
+          transform: translateY(0%);
+        }
+      }
+
+      img {
+        position: relative;
+        width: 6rem;
+        display: block;
+        height: 4.5rem;
+        object-fit: cover;
+
+        @include respond(tablet) {
+          width: 12rem;
+          height: 9rem;
+        }
+
+        @include respond(laptop) {
+          width: 15rem;
+          height: 11rem;
+        }
+        @include respond(widescreen) {
+          width: 18rem;
+          height: 14.1rem;
+        }
+      }
+    }
+    &-icon {
+      margin-top: 1rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+
+      img {
+        transition: transform 300ms ease-in-out;
+        height: 5rem;
+        display: block;
+        position: static;
+        width: 3rem;
+        object-fit: contain;
+
+        @include respond(widescreen) {
+          margin-top: 1.5rem;
+          width: 5.1rem;
+        }
+
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
   }
 }
