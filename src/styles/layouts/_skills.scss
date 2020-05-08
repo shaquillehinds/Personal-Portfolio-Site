@@ -4,25 +4,57 @@ h1.resume {
 }
 .skills {
   position: relative;
-  height: 100vh;
+  min-height: 140vh;
+  height: 100%;
+
+  @include respond(tablet) {
+    min-height: 120vh;
+  }
+  @include respond(laptop) {
+    min-height: 100vh;
+  }
+  @include respond(phone-land) {
+    min-height: 70rem;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    margin-top: 3rem;
+  }
 
   &__div-2 {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    overflow: hidden;
+
+    @include respond(laptop) {
+      flex-direction: row;
+    }
   }
   &__subtitle {
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-weight: 400;
+
+    @include respond(laptop) {
+      font-size: 3.3rem;
+    }
   }
   &__item {
     color: $bright-green;
-    font-size: 1.5rem;
-
+    text-align: left;
+    font-size: 1.8rem;
+    list-style: none;
     font-weight: 300;
     letter-spacing: 0.2rem;
+
+    @include respond(laptop) {
+      font-size: 2.4rem;
+      list-style: disc;
+    }
   }
 }

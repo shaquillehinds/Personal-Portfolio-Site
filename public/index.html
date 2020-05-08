@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="./styles.css" rel="stylesheet" />
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
     <title>Shaquille Hinds | Portfolio</title>
   </head>
   <body>
     <div class="background-image">
-      <img src="./img/wallpaperflare.com_wallpaper.jpg" alt="background-image" />
+      <picture>
+        <source media="(min-width: 1900px)" srcset="./img/background-widescreen-hi-dpi.jpg 3686w" />
+        <source
+          media="{min-width: 950px)"
+          srcset="./img/background-laptop.jpg 1900w, ./img/background-widescreen-hi-dpi.jpg 3686w"
+          alt="background-image"
+        />
+        <source
+          media="{min-width: 475px)"
+          srcset="./img/background-tablet.jpg 950w, ./img/background-laptop.jpg 1900w"
+          alt="background-image"
+        />
+        <img
+          srcset="./img/background-phone.jpg 475w, ./img/background-tablet.jpg 950w"
+          alt="background-image"
+        />
+      </picture>
     </div>
     <div class="hamburger">
       <div class="hamburger__wrapper">
@@ -33,6 +51,10 @@
         <li class="nav__item"><a href="./resume.html">Resume</a></li>
       </ul>
     </div>
+    <div class="modal">
+      <p class="modal__x">X</p>
+      <img src="" alt="modal image" class="modal__image" />
+    </div>
     <header class="landing" id="home">
       <div class="hero">
         <div class="overlay">
@@ -42,7 +64,7 @@
             <a href="./resume.html">Resume</a>
           </button>
           <div class="hero__icon">
-            <a href="https://github.com/shaquillehinds"
+            <a target="_blank" href="https://github.com/shaquillehinds"
               ><img class="hero__icon-img" src="./img/Github.png" alt="Github"
             /></a>
           </div>
@@ -69,7 +91,7 @@
                 ><img data-src="./img/indecision.jpg" alt="indecision app link" class="lazyload"
               /></a>
               <div class="portfolio__right-icon">
-                <a href="https://github.com/shaquillehinds/react-indecision-app"
+                <a target="_blank" href="https://github.com/shaquillehinds/react-indecision-app"
                   ><img data-src="./img/Github.png" alt="Github" class="lazyload"
                 /></a>
               </div>
@@ -79,7 +101,7 @@
                 ><img data-src="./img/recipe.jpg" alt="recipe app link" class="lazyload"
               /></a>
               <div class="portfolio__right-icon">
-                <a href="https://github.com/shaquillehinds/recipe-app"
+                <a target="_blank" href="https://github.com/shaquillehinds/recipe-app"
                   ><img data-src="./img/Github.png" alt="Github" class="lazyload"
                 /></a>
               </div>
@@ -89,7 +111,7 @@
                 <img data-src="./img/todolist.jpg" alt="todolist app link" class="lazyload" />
               </a>
               <div class="portfolio__right-icon">
-                <a href="https://github.com/shaquillehinds/todolist-vanillajs"
+                <a target="_blank" href="https://github.com/shaquillehinds/todolist-vanillajs"
                   ><img data-src="./img/Github.png" alt="Github" class="lazyload"
                 /></a>
               </div>
@@ -117,7 +139,7 @@
                 <img data-src="./img/exercise.jpg" alt="exercise log app link" class="lazyload" />
               </a>
               <div class="portfolio__right-icon">
-                <a href="https://github.com/shaquillehinds/mern-exercise-tracker"
+                <a target="_blank" href="https://github.com/shaquillehinds/mern-exercise-tracker"
                   ><img data-src="./img/Github.png" alt="Github" class="lazyload"
                 /></a>
               </div>
@@ -127,7 +149,7 @@
                 <img data-src="./img/weather.jpg" alt="weather app link" class="lazyload" />
               </a>
               <div class="portfolio__right-icon">
-                <a href="https://github.com/shaquillehinds/node-weather-website"
+                <a target="_blank" href="https://github.com/shaquillehinds/node-weather-website"
                   ><img data-src="./img/Github.png" alt="Github" class="lazyload"
                 /></a>
               </div>
@@ -154,13 +176,17 @@
           </div>
           <div class="portfolio__right">
             <div class="portfolio__right-item">
-              <img data-src="./img/design1.png" alt="design image 1" class="lazyload" />
+              <a> <img data-src="./img/design1.jpg" alt="design image 1" class="lazyload design" /></a>
             </div>
             <div class="portfolio__right-item">
-              <img data-src="./img/design2.png" alt="design image 2" class="lazyload" />
+              <a>
+                <img data-src="./img/design2.jpg" alt="design image 2" class="lazyload design" />
+              </a>
             </div>
             <div class="portfolio__right-item">
-              <img data-src="./img/design3.png" alt="design image 3" class="lazyload" />
+              <a>
+                <img data-src="./img/design3.jpg" alt="design image 3" class="lazyload design" />
+              </a>
             </div>
           </div>
         </div>

@@ -2,10 +2,10 @@ import "normalize.css/normalize.css";
 import "lazysizes";
 import "./styles/main.scss";
 import $ from "jquery";
-window.jQuery = window.$ = $;
 import smoothScroll from "jquery-smooth-scroll";
 import { Highlight, unHighlight } from "./modules/Waypoint";
 import "./modules/hamburger";
+import "./modules/modal";
 import waypoints from "../node_modules/waypoints/lib/noframework.waypoints";
 
 //smoothscrolling

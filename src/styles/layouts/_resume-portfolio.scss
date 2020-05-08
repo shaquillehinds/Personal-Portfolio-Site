@@ -15,6 +15,10 @@
     font-size: 2.4rem;
   }
 
+  @include respond(phone-land) {
+    min-height: 70rem;
+  }
+
   &__text {
     a {
       font-style: normal;

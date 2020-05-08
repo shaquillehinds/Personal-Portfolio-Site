@@ -1,0 +1,38 @@
+.design {
+  cursor: pointer;
+}
+.modal {
+  position: fixed;
+  z-index: -100;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba($dark-grey, 0.9);
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+
+  &__image {
+    align-self: center;
+    object-fit: contain;
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+  }
+  &__x {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 3rem;
+    cursor: pointer;
+
+    @include respond(widescreen) {
+      font-size: 6rem;
+    }
+  }
+  &--open {
+    display: flex;
+    z-index: 100;
+    opacity: 1;
+  }
+}

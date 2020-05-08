@@ -1,4 +1,8 @@
 .experience {
   position: relative;
   min-height: 100vh;
+
+  @include respond(phone-land) {
+    min-height: 70rem;
+  }
 }

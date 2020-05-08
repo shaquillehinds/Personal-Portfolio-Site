@@ -16,6 +16,9 @@
 
   &--auto {
     height: auto;
+  }
+
+  &--50rem {
     @include respond(tablet) {
       height: 50rem;
     }
